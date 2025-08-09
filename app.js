@@ -101,3 +101,20 @@ document.querySelectorAll('nav a').forEach(anchor => {
         });
     });
 });
+const modal = document.getElementById("registrationModal");
+const btn = document.getElementById("openFormBtn");
+const closeBtn = document.querySelector(".closeBtn");
+
+btn.onclick = () => {
+  modal.style.display = "block";
+};
+
+closeBtn.onclick = () => {
+  modal.style.display = "none";
+};
+
+window.onclick = (event) => {
+  if (event.target == modal) {
+    modal.style.display = "none";
+  }
+};

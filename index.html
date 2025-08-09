@@ -101,13 +101,32 @@
             <a href="#"><i class="fas fa-phone-alt"></i> 017XX-XXXXXX</a>
         </div>
     </footer>
-    <!-- বটম ফিক্সড বাটন সেকশন -->
-<div class="bottom-menu">
-  <a href="#home" class="btn">হোম</a>
-  <a href="#profile" class="btn">প্রোফাইল</a>
-  <a href="#services" class="btn">সার্ভিস</a>
-  <a href="#contact" class="btn">যোগাযোগ</a>
-</div>
+    <!DOCTYPE html>
+<html lang="bn">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Fixed Bottom Buttons</title>
+  <!-- FontAwesome CDN -->
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+  />
+  <!-- আপনার CSS ফাইল লিঙ্ক -->
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <!-- Fixed Bottom Buttons -->
+  <div class="fixed-bottom-buttons">
+    <a href="#home" class="fixed-btn"><i class="fas fa-home"></i><span>হোম</span></a>
+    <a href="#register" class="fixed-btn"><i class="fas fa-user-plus"></i><span>রেজিস্টার</span></a>
+    <a href="#contact" class="fixed-btn"><i class="fas fa-phone"></i><span>যোগাযোগ</span></a>
+    <a href="#profile" class="fixed-btn"><i class="fas fa-user"></i><span>প্রোফাইল</span></a>
+  </div>
+
+</body>
+</html>
 
     <!-- Firebase ও অন্যান্য স্ক্রিপ্ট -->
     <script src="https://www.gstatic.com/firebasejs/9.6.0/firebase-app-compat.js"></script>

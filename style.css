@@ -228,6 +228,32 @@ footer {
 .social-icons a:hover {
     color: var(--light-color);
 }
+<style>
+  .bottom-menu {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background: #0e0e24;
+    display: flex;
+    justify-content: space-around;
+    padding: 10px 0;
+    box-shadow: 0 -2px 5px rgba(0,0,0,0.5);
+    z-index: 1000;
+  }
+  .bottom-menu .btn {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    padding: 8px 12px;
+    background: #00c8ff;
+    border-radius: 8px;
+    transition: background 0.3s ease;
+  }
+  .bottom-menu .btn:hover {
+    background: #009ecb;
+  }
+</style>
 
 /* রেস্পন্সিভ ডিজাইন */
 @media (max-width: 768px) {

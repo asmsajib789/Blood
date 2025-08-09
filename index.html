@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Roktodan - রক্তদান নেটওয়ার্ক</title>
+    <link href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- হেডার সেকশন -->
+    <header>
+        <div class="logo-container">
+            <div class="logo">
+                <i class="fas fa-tint blood-icon"></i>
+                <span>Roktodan</span>
+            </div>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#home"><i class="fas fa-home"></i> হোম</a></li>
+                <li><a href="#register"><i class="fas fa-user-plus"></i> রেজিস্টার</a></li>
+                <li><a href="#report"><i class="fas fa-chart-bar"></i> রিপোর্ট</a></li>
+                <li><a href="#contact"><i class="fas fa-phone-alt"></i> কন্টাক্ট</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- হিরো সেকশন -->
+    <section class="hero" id="home">
+        <h1>রক্তদান করুন, জীবন বাঁচান</h1>
+        <p>একটি রক্তদান আজ একটি জীবন বাঁচাতে পারে</p>
+    </section>
+
+    <!-- রিপোর্ট কার্ড -->
+    <section class="report-cards" id="report">
+        <div class="card">
+            <h3><i class="fas fa-users"></i> মোট ইউজার</h3>
+            <p id="totalUsers">0</p>
+        </div>
+        <div class="card">
+            <h3><i class="fas fa-hand-holding-heart"></i> ডোনেশন হয়েছে</h3>
+            <p id="totalDonations">0</p>
+        </div>
+        <div class="card">
+            <h3><i class="fas fa-map-marker-alt"></i> এক্টিভ এলাকা</h3>
+            <p id="activeAreas">64</p>
+        </div>
+    </section>
+
+    <!-- ফর্ম সেকশন -->
+    <div class="form-container">
+        <!-- স্বেচ্ছাসেবী রেজিস্ট্রেশন -->
+        <section class="form-section" id="register">
+            <h2><i class="fas fa-user-edit"></i> স্বেচ্ছাসেবী রেজিট্রেশন করুন</h2>
+            <form id="donorForm">
+                <input type="text" id="name" placeholder="পুরো নাম" required>
+                <input type="tel" id="phone" placeholder="ফোন নম্বর" required>
+                <select id="bloodGroup" required>
+                    <option value="">ব্লাড গ্রুপ নির্বাচন করুন</option>
+                    <option value="A+">A+</option>
+                    <option value="A-">A-</option>
+                    <option value="B+">B+</option>
+                    <option value="B-">B-</option>
+                    <option value="AB+">AB+</option>
+                    <option value="AB-">AB-</option>
+                    <option value="O+">O+</option>
+                    <option value="O-">O-</option>
+                </select>
+                <input type="text" id="district" placeholder="জেলা" required>
+                <button type="submit"><i class="fas fa-user-plus"></i> রেজিস্টার করুন</button>
+            </form>
+        </section>
+
+        <!-- আমার রক্ত প্রয়োজন -->
+        <section class="form-section">
+            <h2><i class="fas fa-heartbeat"></i> আমার রক্ত প্রয়োজন</h2>
+            <form id="bloodRequestForm">
+                <input type="text" id="patientName" placeholder="রোগীর নাম" required>
+                <input type="tel" id="contactNumber" placeholder="যোগাযোগ নম্বর" required>
+                <select id="requiredBloodGroup" required>
+                    <option value="">প্রয়োজনীয় ব্লাড গ্রুপ</option>
+                    <option value="A+">A+</option>
+                    <option value="A-">A-</option>
+                    <!-- অন্যান্য ব্লাড গ্রুপ... -->
+                </select>
+                <input type="text" id="hospital" placeholder="হাসপাতালের নাম" required>
+                <textarea id="address" placeholder="সম্পূর্ণ ঠিকানা" required></textarea>
+                <button type="submit"><i class="fas fa-paper-plane"></i> অনুরোধ পাঠান</button>
+            </form>
+        </section>
+    </div>
+
+    <!-- ফুটার -->
+    <footer id="contact">
+        <p>© 2023 Roktodan - All Rights Reserved</p>
+        <div class="social-icons">
+            <a href="#"><i class="fab fa-facebook"></i></a>
+            <a href="#"><i class="fab fa-whatsapp"></i></a>
+            <a href="#"><i class="fas fa-phone-alt"></i> 017XX-XXXXXX</a>
+        </div>
+    </footer>
+
+    <!-- Firebase ও অন্যান্য স্ক্রিপ্ট -->
+    <script src="https://www.gstatic.com/firebasejs/9.6.0/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.6.0/firebase-database-compat.js"></script>
+    <script src="app.js"></script>
+</body>
+  </html>

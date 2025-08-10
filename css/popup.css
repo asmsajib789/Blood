@@ -24,6 +24,7 @@ button {
 }
 
 .popup-content {
+  position: relative;
   background: white;
   padding: 20px;
   border-radius: 8px;
@@ -47,6 +48,7 @@ button {
 }
 
 .close {
+  position: absolute;
   float: right;
   font-size: 20px;
   cursor: pointer;

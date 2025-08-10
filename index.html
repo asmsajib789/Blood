@@ -58,6 +58,108 @@
         </div>
     </section>
 
+    <!DOCTYPE html>
+<html lang="bn">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>রংপুর জেলার রক্তদাতা</title>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    background-color: white;
+    color: #c70000; /* লাল টেক্সট */
+    text-align: center;
+    padding: 20px;
+  }
+  h2 {
+    color: #c70000;
+    margin-bottom: 15px;
+  }
+  select {
+    padding: 8px;
+    border: 2px solid #c70000;
+    border-radius: 5px;
+    color: #c70000;
+    font-weight: bold;
+    background-color: white;
+    margin-bottom: 20px;
+  }
+  select:focus {
+    outline: none;
+    border-color: #ff0000;
+  }
+  ul {
+    list-style: none;
+    padding: 0;
+    margin-top: 10px;
+  }
+  li {
+    background: #ffe5e5;
+    border: 1px solid #c70000;
+    margin: 5px auto;
+    padding: 10px;
+    width: 80%;
+    border-radius: 5px;
+  }
+</style>
+</head>
+<body>
+
+<h2>রংপুর জেলার রক্তদাতা খুঁজুন</h2>
+
+<label>রক্তের গ্রুপ:</label>
+<select id="bloodGroup">
+  <option value="">সব গ্রুপ</option>
+  <option value="A+">A+</option>
+  <option value="A-">A-</option>
+  <option value="B+">B+</option>
+  <option value="B-">B-</option>
+  <option value="O+">O+</option>
+  <option value="O-">O-</option>
+  <option value="AB+">AB+</option>
+  <option value="AB-">AB-</option>
+</select>
+
+<ul id="donorList"></ul>
+
+<script>
+// রংপুর জেলার ডেমো ডেটা
+let donors = [
+  {name: "Rahim", group: "A+", district: "Rangpur"},
+  {name: "Karim", group: "O+", district: "Rangpur"},
+  {name: "Hasan", group: "B+", district: "Rangpur"},
+  {name: "Jamil", group: "A-", district: "Rangpur"},
+  {name: "Rafiq", group: "O-", district: "Rangpur"}
+];
+
+// লিস্ট দেখানোর ফাংশন
+function renderList(list) {
+  document.getElementById("donorList").innerHTML = 
+    list.length > 0 
+    ? list.map(d => `<li>${d.name} - ${d.group} - ${d.district}</li>`).join("")
+    : "<li>কোনো রক্তদাতা পাওয়া যায়নি</li>";
+}
+
+// সার্চ ফাংশন
+function searchDonors() {
+  let group = document.getElementById("bloodGroup").value;
+  let filtered = donors.filter(d => 
+    (group === "" || d.group === group)
+  );
+  renderList(filtered);
+}
+
+// ইভেন্ট
+document.getElementById("bloodGroup").addEventListener("change", searchDonors);
+
+// প্রথমে সব দেখানো
+renderList(donors);
+</script>
+
+</body>
+</html>
+
     <!-- ফর্ম সেকশন -->
     <div class="form-container">
         <!-- স্বেচ্ছাসেবী রেজিস্ট্রেশন -->
